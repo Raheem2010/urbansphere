@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UrbanSphere Dashboard</title>
+
+  {# Toggle: Play CDN (default) vs Tailwind CSS link (v2.2.19) #}
+  {% if use_link %}
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  {% else %}
+    <script src="https://cdn.tailwindcss.com"></script>
+  {% endif %}
+</head>
+<body class="min-h-screen bg-gray-50 p-6">
+  {# ===== Banner (top-right) ===== #}
+  {% set mode_label = 'Tailwind: Link v2.2.19' if use_link else 'Tailwind: Play CDN' %}
+  {% set switch_to = 'play' if use_link else 'link' %}
+  <div class="fixed top-3 right-3 z-50">
+    <div class="flex items-center gap-2 bg-black/80 text-white rounded-full px-3 py-1 shadow">
+      <span class="text-xs font-medium">{{ mode_label }}</span>
+      <a
+        href="{{ request.url.path }}?cdn={{ switch_to }}"
+        class="text-xs underline hover:no-underline"
+        title="Switch Tailwind mode"
+      >
+        Switch
+      </a>
+    </div>
+  </div>
+
+  <h1 class="text-2xl font-bold mb-4">UrbanSphere MVP</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="bg-white p-4 rounded-2xl shadow">
+      <h2 class="font-semibold mb-2">Waste Reports</h2>
+      <p>Show latest handled reports here (wire later).</p>
+      <p class="text-sm text-gray-500 mt-2">Count: {{ waste_count or 0 }}</p>
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow">
+      <h2 class="font-semibold mb-2">Queues</h2>
+      <p>Live queue positions (wire later).</p>
+      <p class="text-sm text-gray-500 mt-2">Active: {{ queue_count or 0 }}</p>
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow">
+      <h2 class="font-semibold mb-2">Real-estate</h2>
+      <p>Top 5 matches (wire later).</p>
+      <p class="text-sm text-gray-500 mt-2">Listings: {{ property_count or 0 }}</p>
+    </div>
+  </div>
+</body>
+</html>

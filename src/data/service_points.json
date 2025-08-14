@@ -1,0 +1,4 @@
+[
+  {"name":"Central Clinic","type":"clinic","location":"Messa","start_hour":"08:00","end_hour":"16:00","max_parallel":4},
+  {"name":"Food Bank A","type":"food_bank","location":"Nlongkak","start_hour":"09:00","end_hour":"15:00","max_parallel":3}
+]

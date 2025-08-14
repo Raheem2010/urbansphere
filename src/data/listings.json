@@ -1,0 +1,5 @@
+[
+  {"id": 1, "type": "room", "location": "Bonamoussadi", "monthly_rent": 120000, "contact": "+237700000001"},
+  {"id": 2, "type": "apartment", "location": "Nlongkak", "monthly_rent": 210000, "contact": "+237700000002"},
+  {"id": 3, "type": "shop", "location": "Messa", "monthly_rent": 180000, "contact": "+237700000003"}
+]

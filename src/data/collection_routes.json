@@ -1,0 +1,4 @@
+[
+  {"id": 1, "location": "Nlongkak", "daily_windows": "Mon/Wed/Fri 09:00–12:00", "eta_rules": "2-4h if reported 06:00–12:00; else next window"},
+  {"id": 2, "location": "Messa", "daily_windows": "Tue/Thu 10:00–13:00", "eta_rules": "4-6h if before 10:00; else next window"}
+]

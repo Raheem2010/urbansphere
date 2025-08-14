@@ -1,0 +1,4 @@
+[
+  {"id": 1, "location": "Nlongkak", "last_overflow_at": "2025-08-10T09:00:00Z", "risk_score": 0.82},
+  {"id": 2, "location": "Messa", "last_overflow_at": "2025-08-11T12:30:00Z", "risk_score": 0.73}
+]
